@@ -10,7 +10,7 @@ When new version of Helm or Kubernetes-cli is released, brew will update its pac
 
 ### Updating tap
 
-1. Create a file `helm@<x.x.x>.rb` or `Kubernetes-cli@<x.x.x>`
+1. Create a file `helm@<x.x.x>.rb` or `Kubernetes-cli@<x.x.x>.rb`
 
     ``e.g:  helm@3.10.1.rb or kubernetes-cli@1.18.8``
 
@@ -31,7 +31,7 @@ When new version of Helm or Kubernetes-cli is released, brew will update its pac
 
 Class name of the formula should be changed to support installing specific version of the formula.
 
-***File name should be helm@<x.x.x>.rb or Kubernetes-cli@<x.x.x>
+***File name should be helm@<x.x.x>.rb or Kubernetes-cli@<x.x.x>.rb
 and Class name inside the file should be HelmAT<XXX> or KubernetesCliAT<XXX>***
 
 ![Helm package class name change](./assets/classnamehelm.png)
@@ -42,11 +42,23 @@ and Class name inside the file should be HelmAT<XXX> or KubernetesCliAT<XXX>***
     for kubernetes-cli@1.18.8 file class name should be KubernetesCliAT1188 ``
 
 
+:link: [Brew formula class naming convention documentation](https://docs.brew.sh/Versions.html)
 
-# How do I install these formulae?
+
+## Testing new formula
+
+We can test the new formula created by using brew command,
+
+`brew install --build-from-source ./helm@3.5.2.rb`
+
+## How do I install these formulae?
 
 `brew install nintexplatform/homebrew-versions/<formula>`
 
+`e.g brew install nintexplatform/homebrew-versions/helm@3.5.2`
+
 Or 
 
-`brew tap nintexplatform/homebrew-versions` and then `brew install <formula>`.
+`brew tap nintexplatform/homebrew-versions` and
+
+then `brew install <formula>` e.g `brew install helm@3.5.2`.
