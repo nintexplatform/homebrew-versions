@@ -32,7 +32,7 @@ When new version of Helm or Kubernetes-cli is released, brew will update its pac
 Class name of the formula should be changed to support installing specific version of the formula.
 
 ***File name should be helm@<x.x.x>.rb or Kubernetes-cli@<x.x.x>.rb
-and Class name inside the file should be HelmAT<XXX> or KubernetesCliAT<XXX>***
+and Class name inside the file should be KubernetesCliAT<XXX>*** for kubernetes-cli but for Helm it should be as it is 'Helm'. 
 
 ![Helm package class name change](./assets/classnamehelm.png)
 ![Kubectl package class name change](./assets/classnamekubectl.png)
@@ -49,16 +49,16 @@ and Class name inside the file should be HelmAT<XXX> or KubernetesCliAT<XXX>***
 
 We can test the new formula created by using brew command,
 
-`brew install --build-from-source ./helm@3.5.2.rb`
+`brew install --build-from-source ./helm@3.3.0.rb`
 
 ## How do I install these formulae?
 
 `brew install nintexplatform/homebrew-versions/<formula>`
 
-`e.g brew install nintexplatform/homebrew-versions/helm@3.5.2`
+`e.g brew install nintexplatform/homebrew-versions/helm@3.3.0`
 
 Or 
 
 `brew tap nintexplatform/homebrew-versions` and
 
-then `brew install <formula>` e.g `brew install helm@3.5.2`.
+then `brew install <formula>` e.g `brew install helm@3.3.0`.
