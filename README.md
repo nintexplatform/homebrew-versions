@@ -12,7 +12,7 @@ When new version of Helm or Kubernetes-cli is released, brew will update its pac
     
 We can download the specific version of the formula from brew to the Tap using command,
 
-***`brew extract helm <YOUR_GITHUB_USER>/<YOUR_TAP_REPOSITORY_NAME> --version=<required version>`***
+***`brew extract <PACKAGE> <YOUR_GITHUB_USER>/<YOUR_TAP_REPOSITORY_NAME> --version=<required version>`***
 
 ``e.g: brew extract helm nintexplatform/versions --version=3.7.0``
 
