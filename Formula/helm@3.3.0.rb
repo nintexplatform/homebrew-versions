@@ -1,4 +1,4 @@
-class Helm < Formula
+class HelmAT330 < Formula
   desc "The Kubernetes package manager"
   homepage "https://helm.sh/"
   url "https://github.com/helm/helm.git",
@@ -6,13 +6,6 @@ class Helm < Formula
       revision: "8a4aeec08d67a7b84472007529e8097ec3742105"
   license "Apache-2.0"
   head "https://github.com/helm/helm.git"
-
-  bottle do
-    cellar :any_skip_relocation
-    sha256 "a36d0524ff309a3f1358b253e48ed5520748731be49c199295873d84ce0c28f0" => :catalina
-    sha256 "ca2ff6a1c536a3233f288aee49574fcfcac22986cd847fa871e6bbb6bcbd2c89" => :mojave
-    sha256 "07a7e666e95982b057ac5b6934ec7aebb8074706abd17f01cc6055e3dcc138fa" => :high_sierra
-  end
 
   depends_on "go" => :build
 

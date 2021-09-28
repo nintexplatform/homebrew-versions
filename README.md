@@ -9,40 +9,22 @@ When new version of Helm or Kubernetes-cli is released, brew will update its pac
 
 
 ### Updating tap
+    
+We can download the specific version of the formula from brew to the Tap using command,
 
-1. Create a file `helm@<x.x.x>.rb` or `Kubernetes-cli@<x.x.x>.rb`
+***`brew extract helm <YOUR_GITHUB_USER>/<YOUR_TAP_REPOSITORY_NAME> --version=<required version>`***
 
-    ``e.g:  helm@3.10.1.rb or kubernetes-cli@1.18.8``
+``e.g: brew extract helm nintexplatform/versions --version=3.7.0``
 
-2. Copy the content of the formula
-    1. Visit formula history in homebrew
+This brew command will create specific version formula with name **`helm@3.10.1.rb`** in the local machine Tap.
 
-    ![Tool version history link](./assets/latest_version_history.png)
-
-    2. Click on specific version bottle
-
-    ![Tool version bottle](./assets/package_version_bottle.png)
-
-    3. Copy the content of the formula from the bottle file to the newly created tap file.
-
-    ![Bottle file](./assets/bottlefile.png)
-
-3. Change the formula class name
-
-Class name of the formula should be changed to support installing specific version of the formula.
-
-***File name should be helm@<x.x.x>.rb or Kubernetes-cli@<x.x.x>.rb
-and Class name inside the file should be KubernetesCliAT<XXX>*** for kubernetes-cli but for Helm it should be as it is 'Helm'. 
-
-![Helm package class name change](./assets/classnamehelm.png)
-![Kubectl package class name change](./assets/classnamekubectl.png)
+***``Tap in local machine exists in: 
+  /usr/local/Homebrew/Library/Taps/nintexplatform/homebrew-versions/Formula/<packages>``***
+  
+Once new formula is created, it should be pushed to remote [Nintexplatform public repository](https://github.com/nintexplatform/homebrew-versions).
 
 
-`` e.g for helm@3.10.1.rb file class name should be HelmAT3101,
-    for kubernetes-cli@1.18.8 file class name should be KubernetesCliAT1188 ``
-
-
-:link: [Brew formula class naming convention documentation](https://docs.brew.sh/Versions.html)
+:link: [Brew formula extract documentation](https://docs.brew.sh/Versions.html)
 
 
 ## Testing new formula
@@ -53,12 +35,12 @@ We can test the new formula created by using brew command,
 
 ## How do I install these formulae?
 
-`brew install nintexplatform/homebrew-versions/<formula>`
+`brew install nintexplatform/versions/<formula>`
 
-`e.g brew install nintexplatform/homebrew-versions/helm@3.3.0`
+`e.g brew install nintexplatform/versions/helm@3.3.0`
 
 Or 
 
-`brew tap nintexplatform/homebrew-versions` and
+`brew tap nintexplatform/versions` and
 
 then `brew install <formula>` e.g `brew install helm@3.3.0`.
