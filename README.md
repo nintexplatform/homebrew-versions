@@ -16,7 +16,7 @@ We can download the specific version of the formula from brew to the Tap using c
 
 ``e.g: brew extract helm nintexplatform/versions --version=3.7.0``
 
-This brew command will create specific version formula with name **`helm@3.10.1.rb`** in the local machine Tap.
+This brew command will create specific version formula with name **`helm@3.7.0.rb`** in the local machine Tap.
 
 ***``Tap in local machine exists in: 
   /usr/local/Homebrew/Library/Taps/nintexplatform/homebrew-versions/Formula/<packages>``***
@@ -31,16 +31,16 @@ Once new formula is created, it should be pushed to remote [Nintexplatform publi
 
 We can test the new formula created by using brew command,
 
-`brew install --build-from-source ./helm@3.3.0.rb`
+`brew install --build-from-source ./helm@3.7.0.rb`
 
 ## How do I install these formulae?
 
 `brew install nintexplatform/versions/<formula>`
 
-`e.g brew install nintexplatform/versions/helm@3.3.0`
+`e.g brew install nintexplatform/versions/helm@3.7.0`
 
 Or 
 
 `brew tap nintexplatform/versions` and
 
-then `brew install <formula>` e.g `brew install helm@3.3.0`.
+then `brew install <formula>` e.g `brew install helm@3.7.0`.
